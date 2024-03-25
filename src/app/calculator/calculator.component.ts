@@ -16,22 +16,25 @@ export class CalculatorComponent {
   operation?: string;
 
   type(input?: string): void {
-    if (this.result) {
-      this.clear();
-    }
     this.userInput += input!;
   }
 
   setOperation(operation?: string): void {
-    this.operation = operation;
-    this.userInput1 = this.userInput;
-    this.userInput = "0";
+    if (this.userInput1 == "0" && this.userInput == "0" && this.result) {
+      this.operation = operation;
+      this.userInput1 = this.result.toString();
+      this.userInput = "";
+    } else {
+      this.operation = operation;
+      this.userInput1 = this.userInput;
+      this.userInput = "";
+    }
   }
 
   clear(): void {
     this.operation = "";
-    this.userInput = "0";
-    this.userInput1 = "0";
+    this.userInput = "";
+    this.userInput1 = "";
     this.result = undefined;
   }
 
@@ -55,5 +58,7 @@ export class CalculatorComponent {
         this.clear();
         break;
     }
+    this.userInput = "0";
+    this.userInput1 = "0";
   }
 }

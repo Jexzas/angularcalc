@@ -1,61 +1,63 @@
-<table class="table table-primary">
-    <tr class="screen">
-        <h2>{{ result ? result : userInput }}</h2>
-    </tr>
-    <tr>
-        <td>
-            <app-calc-button (click)="type('7')" [value]="'7'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="type('8')" [value]="'8'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="type('9')" [value]="'9'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="setOperation('subtract')" [value]="'-'"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <app-calc-button (click)="type('4')" [value]="'4'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="type('5')" [value]="'5'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="type('6')" [value]="'6'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="setOperation('add')" [value]="'+'"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <app-calc-button (click)="type('1')" [value]="'1'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="type('2')" [value]="'2'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="type('3')" [value]="'3'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="setOperation('multiply')" [value]="'X'" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <app-calc-button (click)="clear()" [value]="'C'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="type('0')"  [value]="'0'"/>
-        </td>
-        <td>
-            <app-calc-button (click)="calculate()" [value]="'='" />
-        </td>
-        <td>
-            <app-calc-button (click)="setOperation('divide')" [value]="'/'"/>
-        </td>
-    </tr>
-</table>
+<div class="mained container-fluid d-flex justify-content-center flex-column align-middle align-items-center">
+    <div class="screen bg-primary text-center">
+        <h2>&nbsp;{{ result ? result : userInput }}</h2>
+    </div>
+    <table class="">
+        <tr>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('7')" [value]="'7'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('8')" [value]="'8'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('9')" [value]="'9'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="setOperation('subtract')" [value]="'-'"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('4')" [value]="'4'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('5')" [value]="'5'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('6')" [value]="'6'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="setOperation('add')" [value]="'+'"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('1')" [value]="'1'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('2')" [value]="'2'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('3')" [value]="'3'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="setOperation('multiply')" [value]="'X'" />
+            </td>
+        </tr>
+        <tr class="bottom">
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="clear()" [value]="'C'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="type('0')"  [value]="'0'"/>
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="calculate()" [value]="'='" />
+            </td>
+            <td class="bg-secondary text-center col-3">
+                <app-calc-button (click)="setOperation('divide')" [value]="'/'"/>
+            </td>
+        </tr>
+    </table>
+</div>
